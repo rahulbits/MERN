@@ -5,6 +5,7 @@
   "main": "server.js",
   "type": "module",
   "dependencies": {
+    "node": "14.x",
     "@paypal/paypal-js": "^4.0.10",
     "bcryptjs": "^2.4.3",
     "classnames": "^2.3.1",

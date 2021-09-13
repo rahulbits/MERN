@@ -40,11 +40,15 @@ const HomeScreen = ({ match }) => {
       )}
 
       <h1>Latest Products</h1>
-      {loading && <Loader />}
-      {keyword && products.length === 0 && (
-        <Message variant='success'>
-          Product Name with {keyword} not found
-        </Message>
+      {loading ? (
+        <Loader />
+      ) : (
+        products.length === 0 &&
+        keyword && (
+          <Message variant='success'>
+            Product Name with {keyword} not found
+          </Message>
+        )
       )}
       {error ? (
         <Message variant='danger'>{error}</Message>
